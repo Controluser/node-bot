@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FB Post Template</title>
+    <!-- <link rel="stylesheet" href="style.css" type="text/css" /> -->
+         <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@100..800&display=swap" rel="stylesheet" />
+    <style>
+      /* @font-face {
+  font-family: "Anek";
+  src: url('/assets/fonts/anek.ttf');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "LEMON MILK";
+  src: url('/assets/fonts/LEMON MILK.otf');
+} */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background: purple; */
+        min-height: 100vh;
+      }
+
+      .template {
+        width: 1280px;
+        min-height: 1280px;
+        /* border: 2px solid lime; */
+        background: url("http://localhost:8000/assets/background.jpg") no-repeat center center/cover;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .template .left-text span,
+      .template .right-text span {
+        color: rgba(255, 255, 255, 0.3);
+        font-size: 50px;
+        font-family: "LEMON MILK";
+        margin: 0 20px;
+      }
+
+      .template .left-text {
+        width: 1280px;
+        position: absolute;
+        white-space: nowrap;
+        overflow: hidden;
+        /* text-overflow: ellipsis; */
+        transform-origin: top left;
+        top: 50%;
+        left: 0;
+        transform: rotate(-90deg) translate(-50%, 0);
+      }
+
+      .template .right-text {
+        width: 1280px;
+        position: absolute;
+        white-space: nowrap;
+        overflow: hidden;
+        /* text-overflow: ellipsis; */
+        transform-origin: top right;
+        top: 50%;
+        right: 0;
+        transform: rotate(90deg) translate(50%, 0);
+      }
+
+      .template .wrapper {
+        width: 88%;
+        border: 5px solid #fff;
+        border-radius: 20px;
+        position: relative;
+        background: rgba(0, 0, 0, 1);
+        margin-top: 60px;
+      }
+
+      /* .template .content::after {
+    content: '';
+    inset: 0;
+    position: absolute;
+    background: linear-gradient(to top, #0a0b44 55%, rgba(10, 11, 68, 0) 60%);
+    border-radius: 0 0 20px 20px;
+} */
+
+      .template .wrapper .logo {
+        width: 300px;
+        top: -35px;
+        left: -30px;
+        position: absolute;
+        z-index: 1;
+      }
+
+      .template .wrapper .date {
+        position: absolute;
+        color: #fff;
+        font-family: "LEMON MILK";
+        font-size: 40px;
+        top: 15px;
+        z-index: 1;
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 10px 15px;
+        right: 15px;
+      }
+
+      .template .wrapper .img_holder {
+        width: 100%;
+        height: 600px;
+        overflow: hidden;
+        /* border: 2px solid lime; */
+        position: relative;
+      }
+
+      .template .wrapper .img_holder::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -1px;
+        height: 100px;
+        background: linear-gradient(to top, #0a0b44, rgba(10, 11, 68, 0));
+        width: 100%;
+      }
+
+      .template .wrapper .img_holder img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 20px 20px 0 0;
+      }
+
+      .template .wrapper .text-content {
+        position: relative;
+        height: calc(100% - 600px);
+        color: #fff;
+        font-family: "Anek Tamil", sans-serif;
+        z-index: 2;
+        background: #0a0b44;
+        padding: 30px 10px 0;
+        border-radius: 0 0 20px 20px;
+      }
+
+      .template .wrapper .text-content h1 {
+        font-size: 50px;
+        /* border: 1px solid lime; */
+        text-align: center;
+        color: #ffde21;
+        font-weight: 700;
+      }
+
+      .template .wrapper .text-content p {
+        font-size: 40px;
+        text-align: center;
+        padding: 10px 0 30px;
+        font-weight: 500;
+      }
+
+      .template .footer {
+        bottom: 10px;
+        color: #fff;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        margin: 15px 0;
+      }
+
+      .template .footer .facebook,
+      .template .footer .youtube {
+        width: 60px;
+        height: 60px;
+        border: 2px solid #fff;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin: 0 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        fill: #fff;
+      }
+
+      .template .footer span {
+        font-family: "LEMON MILK";
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="template">
+      <div class="left-text">
+        <span>LANKA TODAY</span>
+        <span>LANKA TODAY</span>
+        <span>LANKA TODAY</span>
+        <span>LANKA TODAY</span>
+        <span>LANKA TODAY</span>
+        <span>LANKA TODAY</span>
+        <span>LANKA TODAY</span>
+        <span>LANKA TODAY</span>
+        <span>LANKA TODAY</span>
+        <span>LANKA TODAY</span>
+      </div>
+      <div class="right-text">
+        <span>LANKA TODAY</span>
+        <span>LANKA TODAY</span>
+        <span>LANKA TODAY</span>
+        <span>LANKA TODAY</span>
+        <span>LANKA TODAY</span>
+        <span>LANKA TODAY</span>
+        <span>LANKA TODAY</span>
+        <span>LANKA TODAY</span>
+        <span>LANKA TODAY</span>
+        <span>LANKA TODAY</span>
+      </div>
+
+      <div class="wrapper">
+        <img class="logo" src="http://localhost:8000/assets/logo.png" alt="" />
+        <span class="date">{{date}}</span>
+        <div class="img_holder">
+          <img src="{{image}}" alt="" />
+        </div>
+        <div class="text-content">
+          <h1 class="title">{{title}}</h1>
+          <p class="content">{{content}}</p>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+            <!--!Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+            <path
+              d="M240 363.3L240 576L356 576L356 363.3L442.5 363.3L460.5 265.5L356 265.5L356 230.9C356 179.2 376.3 159.4 428.7 159.4C445 159.4 458.1 159.8 465.7 160.6L465.7 71.9C451.4 68 416.4 64 396.2 64C289.3 64 240 114.5 240 223.4L240 265.5L174 265.5L174 363.3L240 363.3z"
+            />
+          </svg>
+        </div>
+        <div class="youtube">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+            <!--!Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+            <path
+              d="M581.7 188.1C575.5 164.4 556.9 145.8 533.4 139.5C490.9 128 320.1 128 320.1 128C320.1 128 149.3 128 106.7 139.5C83.2 145.8 64.7 164.4 58.4 188.1C47 231 47 320.4 47 320.4C47 320.4 47 409.8 58.4 452.7C64.7 476.3 83.2 494.2 106.7 500.5C149.3 512 320.1 512 320.1 512C320.1 512 490.9 512 533.5 500.5C557 494.2 575.5 476.3 581.8 452.7C593.2 409.8 593.2 320.4 593.2 320.4C593.2 320.4 593.2 231 581.8 188.1zM264.2 401.6L264.2 239.2L406.9 320.4L264.2 401.6z"
+            />
+          </svg>
+        </div>
+        <span>/LANKA TODAY OFFICIAL</span>
+      </div>
+    </div>
+  </body>
+</html>
